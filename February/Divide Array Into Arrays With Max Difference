@@ -1,0 +1,36 @@
+Problem Statement
+
+You are given an integer array nums of size n and a positive integer k.
+
+Divide the array into one or more arrays of size 3 satisfying the following conditions:
+
+Each element of nums should be in exactly one array.
+The difference between any two elements in one array is less than or equal to k.
+Return a 2D array containing all the arrays. If it is impossible to satisfy the conditions, return an empty array. And if there are multiple answers, return any of them.
+
+
+Solution
+
+ class Solution {
+    public int[][] divideArray(int[] nums, int k) {
+        int len = nums.length;
+        int res[][] = new int[len/3][3];
+        Arrays.sort(nums);
+        for(int i=0,m=0;i<len;i+=3,m++)
+        {
+            res[m][0] = nums[i];
+            for(int j=1;j<3;j++)
+            {
+                if(nums[i+j]-res[m][0]<=k)
+                {
+                    res[m][j] = nums[i+j];
+                }
+                else
+                {
+                    return new int[0][0];
+                }
+            }
+        }
+        return res;
+    }
+}
