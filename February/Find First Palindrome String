@@ -1,0 +1,32 @@
+Given an array of strings words, return the first palindromic string in the array. If there is no such string, return an empty string "".
+
+A string is palindromic if it reads the same forward and backward.
+
+class Solution {
+    private boolean isPalindrome(String s) {
+        int start = 0;
+        int end = s.length() - 1;
+        
+        while (start <= end) {
+            // Return false if the characters are not the same.
+            if (s.charAt(start) != s.charAt(end)) {
+                return false;
+            }
+            
+            start++;
+            end--;
+        }
+        
+        return true;
+    }
+    
+    public String firstPalindrome(String[] words) {
+        for (String s : words) {
+            if (isPalindrome(s)) {
+                return s;
+            }
+        }
+        
+        return "";
+    }
+}
