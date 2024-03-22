@@ -28,8 +28,4 @@ Contributions are welcome! If you have a different approach to solving a problem
 
 The solutions provided here are one of many possible approaches to solving the given problems. We encourage you to understand the solutions and try to come up with your own implementations before referring to them.
 
-## Contact
-
-If you have any questions, suggestions, or concerns, feel free to reach out via [email](mailto:your_email@example.com) or [create an issue](https://github.com/your_username/Monthly-Challenges-Daily-on-LeetCode/issues).
-
 Happy coding! 🚀
